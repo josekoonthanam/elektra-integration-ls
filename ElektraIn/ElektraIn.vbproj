@@ -58,38 +58,49 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AdminBoard3.5">
-      <HintPath>..\Dependencies\AdminBoard3.5.dll</HintPath>
+    <Reference Include="AdminBoard3.5, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\AdminBoard3.5.dll</HintPath>
     </Reference>
-    <Reference Include="AjaxControlToolkit">
-      <HintPath>..\Dependencies\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10123.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="EF.Language.Elektra.Client.Model">
-      <HintPath>..\Dependencies\EF.Language.Elektra.Client.Model.dll</HintPath>
+    <Reference Include="EF.Language.Elektra.Client.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EF.Language.Elektra.Client.Model.dll</HintPath>
     </Reference>
-    <Reference Include="EF.Language.Elektra.Client.ServiceProxy">
-      <HintPath>..\Dependencies\EF.Language.Elektra.Client.ServiceProxy.dll</HintPath>
+    <Reference Include="EF.Language.Elektra.Client.ServiceProxy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EF.Language.Elektra.Client.ServiceProxy.dll</HintPath>
     </Reference>
-    <Reference Include="EFLanguage.LS.ProdLookups">
-      <HintPath>..\Dependencies\EFLanguage.LS.ProdLookups.dll</HintPath>
+    <Reference Include="EFLanguage.LS.ProdLookups, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EFLanguage.LS.ProdLookups.dll</HintPath>
     </Reference>
-    <Reference Include="EFLanguage.LS.Production">
-      <HintPath>..\Dependencies\EFLanguage.LS.Production.dll</HintPath>
+    <Reference Include="EFLanguage.LS.Production, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EFLanguage.LS.Production.dll</HintPath>
     </Reference>
-    <Reference Include="EFLanguage.Sales.Poseidon.Integration.CRMMessage">
-      <HintPath>..\Dependencies\EFLanguage.Sales.Poseidon.Integration.CRMMessage.dll</HintPath>
+    <Reference Include="EFLanguage.Sales.Poseidon.Integration.CRMMessage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EFLanguage.Sales.Poseidon.Integration.CRMMessage.dll</HintPath>
     </Reference>
-    <Reference Include="EFTours.Framework.IntegrationFramework">
-      <HintPath>..\Dependencies\EFTours.Framework.IntegrationFramework.dll</HintPath>
+    <Reference Include="EFTours.Framework.IntegrationFramework, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EFTours.Framework.IntegrationFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EFTours.Framework.IntegrationFramework.Common">
-      <HintPath>..\Dependencies\EFTours.Framework.IntegrationFramework.Common.dll</HintPath>
+    <Reference Include="EFTours.Framework.IntegrationFramework.Common, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EFTours.Framework.IntegrationFramework.Common.dll</HintPath>
     </Reference>
-    <Reference Include="EFTours.Utilities">
-      <HintPath>..\Dependencies\EFTours.Utilities.dll</HintPath>
+    <Reference Include="EFTours.Utilities, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EFTours.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="EFTours.Utilities2">
-      <HintPath>..\Dependencies\EFTours.Utilities2.dll</HintPath>
+    <Reference Include="EFTours.Utilities2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dependencies\EFTours.Utilities2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
