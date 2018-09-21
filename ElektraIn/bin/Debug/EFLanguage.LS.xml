@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EFLanguage.LS.ElektraIn
+</name>
+</assembly>
+<members>
+<member name="T:EFLanguage.LS.ElektraIn.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:EFLanguage.LS.ElektraIn.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:EFLanguage.LS.ElektraIn.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:EFLanguage.LS.ElektraIn.BookingAdapter.Load(System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="id"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:EFLanguage.LS.ElektraIn.BookingAdapter.Update(EFLanguage.Sales.Poseidon.Integration.CRMMessage.LSBooking,System.String)">
+ <summary>
+  Updates the value from the msg-derived Individual object to the 
+  mapping Individual object loaded from the production system.
+ </summary>
+ <param name="msg"></param>
+ <param name="sourceSysCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:EFLanguage.LS.ElektraIn.StudentAdapter.Update(EFLanguage.Sales.Poseidon.Integration.CRMMessage.Customer,System.String)">
+ <summary>
+  Updates the value from the msg-derived Individual object to the 
+  mapping Individual object loaded from the production system.
+ </summary>
+ <param name="msg"></param>
+ <param name="sourceSysCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

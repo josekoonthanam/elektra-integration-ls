@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2cefe33-0f43-47d4-8889-d069b6669901" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://usb-posqaweb.ef.com/AutoConfirmationServiceDev/RTIAutoConfirmationService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a3f00c62-11a7-4fba-abf9-f68c9cdb96cf" SourceId="1" SourceUrl="http://usb-posqaweb.ef.com/AutoConfirmationServiceDev/RTIAutoConfirmationService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="72a72146-eb72-4b7c-9099-0d9d6fdfbaf7" SourceId="1" SourceUrl="http://usb-posqaweb.ef.com/AutoConfirmationServiceDev/RTIAutoConfirmationService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4d6ea1ca-a079-4825-b689-d7d2f9dc85e1" SourceId="1" SourceUrl="http://usb-posqaweb.ef.com/AutoConfirmationServiceDev/RTIAutoConfirmationService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

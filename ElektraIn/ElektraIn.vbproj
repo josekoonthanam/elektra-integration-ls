@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C7C64FF-3074-4417-AFC6-5E1E58D5B226}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EFLanguage.LS.ElektraIn</RootNamespace>
+    <AssemblyName>EFLanguage.LS.ElektraIn</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>EFLanguage.LS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>EFLanguage.LS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdminBoard3.5">
+      <HintPath>..\Dependencies\AdminBoard3.5.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\Dependencies\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EF.Language.Elektra.Client.Model">
+      <HintPath>..\Dependencies\EF.Language.Elektra.Client.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="EF.Language.Elektra.Client.ServiceProxy">
+      <HintPath>..\Dependencies\EF.Language.Elektra.Client.ServiceProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="EFLanguage.LS.ProdLookups">
+      <HintPath>..\Dependencies\EFLanguage.LS.ProdLookups.dll</HintPath>
+    </Reference>
+    <Reference Include="EFLanguage.LS.Production">
+      <HintPath>..\Dependencies\EFLanguage.LS.Production.dll</HintPath>
+    </Reference>
+    <Reference Include="EFLanguage.Sales.Poseidon.Integration.CRMMessage">
+      <HintPath>..\Dependencies\EFLanguage.Sales.Poseidon.Integration.CRMMessage.dll</HintPath>
+    </Reference>
+    <Reference Include="EFTours.Framework.IntegrationFramework">
+      <HintPath>..\Dependencies\EFTours.Framework.IntegrationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EFTours.Framework.IntegrationFramework.Common">
+      <HintPath>..\Dependencies\EFTours.Framework.IntegrationFramework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="EFTours.Utilities">
+      <HintPath>..\Dependencies\EFTours.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="EFTours.Utilities2">
+      <HintPath>..\Dependencies\EFTours.Utilities2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="EFLanguage.LS.ProdLookups" />
+    <Import Include="EFLanguage.LS.Production" />
+    <Import Include="EFLanguage.Sales.Poseidon.Integration" />
+    <Import Include="EFLanguage.Sales.Poseidon.Integration.CRMMessage" />
+    <Import Include="EFTours" />
+    <Import Include="EFTours.Framework.IntegrationFramework" />
+    <Import Include="EFTours.Framework.IntegrationFramework.Common" />
+    <Import Include="EFTours.Framework.IntegrationFramework.Data" />
+    <Import Include="EFTours.Utilities" />
+    <Import Include="EFTours.Utilities.ExceptionManagement" />
+    <Import Include="EFTours.Utilities.Null" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Booking\BookingAdapter.vb" />
+    <Compile Include="Booking\BookingLineAdapter.vb" />
+    <Compile Include="Booking\BookingMessageHandler.vb" />
+    <Compile Include="Booking\Data\asp_BookingFindBySalesBookingId.vb" />
+    <Compile Include="Booking\Data\asp_CourseFindByCourseTypeCode.vb" />
+    <Compile Include="Booking\Data\asp_FlightItinFindBySalesFlightItinId.vb" />
+    <Compile Include="Booking\Data\asp_FlightItinIdByBookingId.vb" />
+    <Compile Include="Booking\Data\asp_GenericDocumentInsert.vb" />
+    <Compile Include="Booking\Data\asp_GetCommunicationManagerIDEmailNumberSendDatebyBookingId.vb" />
+    <Compile Include="Booking\Data\asp_UpdateAccomArticleIsCaxWhenGenderChanged.vb" />
+    <Compile Include="Booking\Data\asp_GetFirstCourseAndDOBForBooking.vb" />
+    <Compile Include="Booking\Data\asp_GetModifiedBookingForAutoconfirmation.vb" />
+    <Compile Include="Booking\Data\asp_GetStudentIdBySalesCustomerIdAndSalesRegion.vb" />
+    <Compile Include="Booking\Data\asp_HasMultipleCourses.vb" />
+    <Compile Include="Booking\Data\asp_IsAccomodationArticleEligibleForRTI.vb" />
+    <Compile Include="Booking\Data\asp_IsClassPresent.vb" />
+    <Compile Include="Booking\Data\asp_LSUpdateTrackerInsert.vb" />
+    <Compile Include="Booking\Data\asp_PreGroupBookingCancelled.vb" />
+    <Compile Include="Booking\Data\asp_RemoveRequiredCheckItemForBooking.vb" />
+    <Compile Include="Constants.vb" />
+    <Compile Include="CourseBookingData\CourseBooking.vb" />
+    <Compile Include="CourseBookingData\PoseidonElektraBookingData.vb" />
+    <Compile Include="Customer\StudentAdapter.vb" />
+    <Compile Include="ElektraMessageReceivingSvc.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\RTIService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\RTIService\service.wsdl" />
+    <None Include="Service References\RTIService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RTIService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\RTIService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RTIService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RTIService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RTIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
