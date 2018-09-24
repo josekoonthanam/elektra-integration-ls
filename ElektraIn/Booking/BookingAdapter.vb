@@ -1253,6 +1253,60 @@ Public Class BookingAdapter
 
             End If
 
+            'ELEK -9753
+            Dim PosbookingItems As New List(Of BookingLine)
+            If IsSomething(msg.BookingLineItems) And msg.BookingLineItems.Count > 1 Then
+                For Each cb As BookingLine In msg.BookingLineItems
+                    If cb.StatusCode <> BookingArticleStatusLookup.BookingArticleStatuses.Cancelled AndAlso cb.DestinationCode.Trim().ToUpper().Equals("KR-SEL") Then
+                        PosbookingItems.Add(cb)
+                    End If
+                Next
+            End If
+
+            'ELEK -9753
+            If IsSomething(PosbookingItems) And PosbookingItems.Count > 1 Then
+                Dim _previousItmList As New List(Of BookingLine)
+                Dim _bookingForActive As New List(Of BookingLine)
+
+                PosbookingItems.Sort(Function(a, b) a.StartDate.CompareTo(b.StartDate))
+                For Each BookedItem As BookingLine In PosbookingItems
+                    If _previousItmList.Count = 0 Then
+                        _previousItmList.Add(BookedItem)
+                    Else
+                        Dim item As BookingLine = _previousItmList(0)
+                        Dim _weeksGapInDays = Math.Abs((BookedItem.StartDate - item.EndDate).Days)
+                        If _weeksGapInDays <= 28 Then
+                            If Not _bookingForActive.Contains(item) Then
+                                _bookingForActive.Add(item)
+                            End If
+                            If Not _bookingForActive.Contains(BookedItem) Then
+                                _bookingForActive.Add(BookedItem)
+                            End If
+                        Else
+                            If Not _bookingForActive.Contains(item) Then
+                                _bookingForActive.Add(item)
+                            End If
+                            If _bookingForActive.Count > 0 Then
+                                AutoConfirmWithTotalWeeksCalculate(_bookingForActive, bkn.CourseBookingList)
+                            End If
+                        End If
+
+                        _previousItmList = New List(Of BookingLine)
+                        _previousItmList.Add(BookedItem)
+                        Dim LastItem As Int16 = PosbookingItems.Count - 1
+                        If BookedItem.Equals(PosbookingItems(LastItem)) Then
+                            If Not _bookingForActive.Contains(BookedItem) Then
+                                _bookingForActive.Add(BookedItem)
+                            End If
+                        End If
+                    End If
+                Next
+                If _bookingForActive.Count > 0 Then
+                    AutoConfirmWithTotalWeeksCalculate(_bookingForActive, bkn.CourseBookingList)
+                End If
+            End If
+
+
             'History Tracking for Admin Board - Poseidon(Modified), Elektra(Existing)
             Try
                 poseidonElektraBooking.bookingId = bkn.Booking_id
@@ -1303,7 +1357,6 @@ Public Class BookingAdapter
 
             stuAdapter.Booking = bkn
             stepInfo2 = stuAdapter.Update(msg.Customer, sourceSysCode)
-
 
             '******* Dont remove - If removed history tracking for Admin Board doesnt work *******
             Console.WriteLine("Booking Id: {0}", bookingMatching.BookingId)
@@ -1489,6 +1542,34 @@ Public Class BookingAdapter
 
         Return stepInfo
     End Function
+
+
+
+    Private Sub AutoConfirmWithTotalWeeksCalculate(ByRef bookingForActive As List(Of BookingLine), ByRef elekBknList As CourseBookingList)
+
+        Dim totalWeeks As Int16 = 0
+        For Each item As BookingLine In bookingForActive
+            totalWeeks = totalWeeks + item.Quantity
+        Next
+        If totalWeeks > 24 Then
+            For Each item As BookingLine In bookingForActive
+                For Each ebi As CourseBooking In elekBknList
+                    If item.StartDate.Equals(ebi.StartDate) AndAlso item.EndDate.Equals(ebi.EndDate) AndAlso item.DestinationCode.Trim().ToUpper().Equals(ebi.DestinationCode.Trim().ToUpper()) AndAlso ebi.DestinationCode.Trim().ToUpper().Equals("KR-SEL") Then
+                        If ebi.StatusCode.Equals(CourseBookingStatusLookup.CourseBookingStatuses.Confirmed) Then
+                            ebi.StatusCode = "AC"
+                            ebi.IsAutoConfirmed = False
+                            ebi.StatusDate = Now
+                            ebi.AcceptedDate = Nothing
+                            ebi.ConfirmedDate = New Date(1800, 1, 1)
+                        End If
+                        Exit For
+                    End If
+                Next
+            Next
+        End If
+        bookingForActive = New List(Of BookingLine)
+
+    End Sub
 
     Public Shared Function UpdateAccomArticleIsCaxWhenGenderChanged(ByVal bookingId As Integer, ByVal oldGenderCode As String, newGenderCode As String) As DataTable
 
